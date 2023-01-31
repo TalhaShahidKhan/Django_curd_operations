@@ -7,10 +7,10 @@
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-wrap w-full mb-20">
       <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Pitchfork Kickstarter Taxidermy</h1>
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Listings of all Books.</h1>
         <div class="h-1 w-20 bg-indigo-500 rounded"></div>
       </div>
-      <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
+      <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">Welcome to our bookshop. We have all the books listed here. Choice one and buy. Thank you.</p>
     </div>
     <div class="flex flex-wrap -m-4">
       {% for list in booklist %}
@@ -19,9 +19,14 @@
           <img class="h-40 rounded w-full object-cover object-center mb-6" src="{{list.image.url}}" alt="content">
           <h2 class="text-xl text-gray-900 font-medium title-font mb-4">{{list.name}}</h2>
           <h2 class="text-lg text-gray-900 font-medium title-font mb-4">${{list.price}}</h2>
+          <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded-xl">
+            Buy Now
+          </button>
         </div>
       </div>
       {% endfor %}
+      <a href="" class="my-auto text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add a New Book</a>
+
     </div>
   </div>
 </section>
