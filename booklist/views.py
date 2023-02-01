@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect,HttpResponse
+from django.urls import reverse,reverse_lazy
 from booklist.models import ListingsOfBook
 from booklist.forms import AddBookForm
 # Create your views here.
@@ -17,11 +18,13 @@ def list_book(request):
 # Create Books
 def create_book(request):
   form=AddBookForm()
-  if request.method =="POST":
-    form=AddBookForm(request.POST)
-    if form.is_valid():
-      form.save()
   context={
     "form":form
   }
+  if request.method =="POST":
+    form=AddBookForm(request.POST,request.FILES)
+    if form.is_valid():
+      form.save()
+      return redirect("/crud1")
+
   return render (request, 'addbook.html',context)
