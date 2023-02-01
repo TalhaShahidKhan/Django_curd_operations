@@ -28,3 +28,25 @@ def create_book(request):
       return redirect("/crud1")
 
   return render (request, 'addbook.html',context)
+
+
+
+# Update Book Details
+def update_book(request,pk):
+  book=ListingsOfBook.objects.get(id=pk)
+  form=AddBookForm(instance=book)
+  context={
+    "form":form,
+  }
+  if request.method =="POST":
+    form=AddBookForm(request.POST, instance=book, files=request.FILES)
+    if form.is_valid():
+      form.save()
+      return redirect("/crud1")
+  return render(request, 'updatebook.html',context)
+
+# Delete Book 
+def delete_book(request,pk):
+  book=ListingsOfBook.objects.get(id=pk)
+  book.delete()
+  return render(request, 'deletebook.html')
