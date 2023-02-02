@@ -50,3 +50,16 @@ def delete_book(request,pk):
   book=ListingsOfBook.objects.get(id=pk)
   book.delete()
   return render(request, 'deletebook.html')
+
+
+
+
+
+# Detail of Book 
+def book_details(request,pk):
+  book=ListingsOfBook.objects.get(id=pk)
+  context={
+    "book":book
+  }
+
+  return render(request, 'bookdetails.html',context)

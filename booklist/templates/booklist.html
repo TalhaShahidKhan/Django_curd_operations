@@ -17,12 +17,9 @@
       <div class="xl:w-1/4 md:w-1/2 p-4">
         <div class="bg-gray-100 p-6 rounded-lg">
           <img class="h-40 rounded w-full object-cover object-center mb-6" src="{{list.image.url}}" alt="content">
-          <a href="" class="text-xl text-gray-900 font-medium title-font mb-4">{{list.name}}</a>
+          <a href="{% url 'booklist:detailbook' list.id %}" class="text-xl text-gray-900 font-medium title-font mb-4">{{list.name}}</a>
           <h2 class="text-lg text-gray-900 font-medium title-font mb-4 mt-2">${{list.price}}</h2>
-          <div style="display: flex; flex-direction: column;" class="w-3/4 ">
-            <a href="{% url 'booklist:up_book' list.id %}" class="bg-blue-500 hover:bg-blue-700 rounded-xl ml-2 px-2 py-3 shadow-xl font-bold text-white mt-2 text-center">Update Details</a>
-            <a href="{% url 'booklist:del_book' list.id %}" class="bg-blue-500 hover:bg-blue-700 rounded-xl ml-2 px-2 py-3 shadow-xl font-bold text-white mt-2 text-center">Delete Book</a>
-          </div>
+          
         </div>
       </div>
       {% endfor %}
@@ -31,15 +28,6 @@
     </div>
   </div>
 </section>
-
-
-
-
-
-
-
-
-
 
 
 
