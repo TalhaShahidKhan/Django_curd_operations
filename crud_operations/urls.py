@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_page,name='home'),
     path('crud1/', include('booklist.urls',namespace='booklist')),
+    path('crud2/', include('post.urls',namespace='post')),
 ]
 if settings.DEBUG:
     urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
