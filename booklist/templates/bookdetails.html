@@ -11,6 +11,7 @@
       <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">{{book.name}}
       </h1>
       <div class="mb-8 leading-relaxed">{{book.description}}</div>
+      {% if user.is_authenticated %}
       <div class="">
         <a href="{% url 'booklist:up_book' book.id %}"
           class="bg-blue-500 hover:bg-blue-700 rounded-xl ml-2 px-2 py-3 shadow-xl font-bold text-white mt-2 text-center">Update
@@ -19,6 +20,7 @@
           class="bg-blue-500 hover:bg-blue-700 rounded-xl ml-2 px-2 py-3 shadow-xl font-bold text-white mt-2 text-center">Delete
           Book</a>
       </div>
+      {% endif %}
     </div>
   </div>
 </section>

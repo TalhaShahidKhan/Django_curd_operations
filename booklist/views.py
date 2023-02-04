@@ -36,7 +36,7 @@ def update_book(request,pk):
   book=ListingsOfBook.objects.get(id=pk)
   form=AddBookForm(instance=book)
   context={
-    "form":form,
+    "form":form
   }
   if request.method =="POST":
     form=AddBookForm(request.POST, instance=book, files=request.FILES)
