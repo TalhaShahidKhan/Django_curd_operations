@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'product.apps.ProductConfig',
     'post.apps.PostConfig',
     'booklist.apps.BooklistConfig',
     'django.contrib.admin',

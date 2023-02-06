@@ -10,7 +10,7 @@
 </head>
 <body>
   {% comment %} Navbar Start {% endcomment %}
-  <header class="text-gray-600 body-font">
+  <header class="text-gray-600 body-font mb-4">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
       <a href="{% url 'home' %}" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
@@ -19,11 +19,10 @@
         <span class="ml-3 text-xl">Crud Operations</span>
       </a>
       <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-        <a href="{% url 'home' %}" class="mr-5 hover:text-gray-900">Home</a>
-        <a href="{% url 'booklist:listings' %}" class="mr-5 hover:text-gray-900">Booklist</a>
-        <a href="{% url 'post:post_list' %}" class="mr-5 hover:text-gray-900">BlogPost</a>
-        {% comment %} <a href="{% url '' %}" class="mr-5 hover:text-gray-900">Third Link</a>
-        <a href="{% url '' %}" class="mr-5 hover:text-gray-900">Fourth Link</a> {% endcomment %}
+        <a href="{% url 'home' %}" class="mr-5 px-2 py-3 hover:bg-gray-700 rounded-xl hover:text-white hover:shadow-xl">Home</a>
+        <a href="{% url 'booklist:listings' %}" class="mr-5 px-2 py-3 hover:bg-gray-700 rounded-xl hover:text-white hover:shadow-xl">Booklist</a>
+        <a href="{% url 'post:post_list' %}" class="mr-5 px-2 py-3 hover:bg-gray-700 rounded-xl hover:text-white hover:shadow-xl">BlogPost</a>
+        <a href="{% url 'product:product_list' %}" class="mr-5 px-2 py-3 hover:bg-gray-700 rounded-xl hover:text-white hover:shadow-xl">Ecomerce Product</a>
       </nav>
       <a href="https://github.com/talhakhan54" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">About Me
         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
@@ -37,7 +36,7 @@
   {% block body %}{% endblock body %}
 
   {% comment %} Footer Start {% endcomment %}
-  <footer class="text-gray-600 body-font position-static">
+  <footer class="mt-4 text-gray-600 body-font position-static">
     <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
       <a href="{% url 'home' %}" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
